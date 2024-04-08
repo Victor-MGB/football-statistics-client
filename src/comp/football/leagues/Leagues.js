@@ -28,7 +28,7 @@ function Leagues() {
   return (
     <>
       <Navbar />
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8 mt-[6rem]">
         <h1 className="text-3xl font-bold mb-6">List of Leagues</h1>
         {error ? (
           <div className="text-red-500">Error: {error}</div>
