@@ -66,6 +66,15 @@ const Navbar = () => {
                   Standings
                 </Link>
               </li>
+
+              <li>
+                <Link
+                  to="/topscorer"
+                  className="text-white hover:text-gray-300 transition duration-300"
+                >
+                  TopScorer
+                </Link>
+              </li>
             </ul>
           </div>
           <div className="md:hidden">
@@ -139,6 +148,15 @@ const Navbar = () => {
                 Standings
               </Link>
             </li>
+
+            <li>
+                <Link
+                  to="/topscorer"
+                  className="text-white hover:text-gray-300 transition duration-300"
+                >
+                  TopScorer
+                </Link>
+              </li>
           </ul>
         </div>
       </div>

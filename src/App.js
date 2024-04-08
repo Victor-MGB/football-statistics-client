@@ -8,6 +8,7 @@ import Fixtures from "./comp/football/fixtures/Fixtures"
 import H2H from "./comp/football/h2h/H2H";
 import LiveScore from "./comp/football/livescore/LiveScore";
 import Standings from "./comp/football/standings/Standings";
+import TopScorer from "./comp/football/topscorer/TopScorer"
 // import About from "./About";
 // import Contact from "./Contact";
 
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/h2h" element={<H2H/>}/>
           <Route path="/livescore" element={<LiveScore/>}/>
           <Route path="/standings" element={<Standings/>}/>
+          <Route path="/topscorer" element={<TopScorer/>}/>
         </Routes>
         {/* <Route path="/about" component={About} /> */}
         {/* <Route path="/contact" component={Contact} /> */}
