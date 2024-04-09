@@ -9,33 +9,32 @@ function Fixtures() {
   const perPage = 10; // Define perPage constant
 
   useEffect(() => {
-    if (searchQuery.trim() !== "") {
-      fetchFixtures();
-    }
-  }, [searchQuery]); 
+    const fetchFixtures = () => {
+      if (searchQuery.trim() !== "") {
+        fetch(
+          `https://apiv2.allsportsapi.com/football/?met=Fixtures&APIkey=49097422559256be8a821f7c8f71ee98ac0dcce2ac4ff6b4e85b5212e2edc492&from=2021-05-18&to=2021-05-18&page=${page}&per_page=${perPage}&league_round=${searchQuery}`
+        )
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Failed to fetch data");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            setFixtures(data.result);
+          })
+          .catch((error) => {
+            console.error("Error fetching data:", error);
+            setError(error.message);
+          });
+      }
+    };
 
-  const fetchFixtures = () => {
-    fetch(
-      `https://apiv2.allsportsapi.com/football/?met=Fixtures&APIkey=49097422559256be8a821f7c8f71ee98ac0dcce2ac4ff6b4e85b5212e2edc492&from=2021-05-18&to=2021-05-18&page=${page}&per_page=${perPage}&league_round=${searchQuery}`
-    )
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Failed to fetch data");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setFixtures(data.result);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-        setError(error.message);
-      });
-  };
+    fetchFixtures();
+  }, [searchQuery, page, perPage]); // Include all dependencies
 
   const handleSearch = () => {
     setPage(1); // Reset page to 1 when performing a new search
-    fetchFixtures();
   };
 
   return (
