@@ -75,6 +75,60 @@ const Navbar = () => {
                   TopScorer
                 </Link>
               </li>
+
+              <li>
+                <Link
+                  to="/team"
+                  className="text-white hover:text-gray-300 transition duration-300"
+                >
+                  Teams
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/players"
+                  className="text-white hover:text-gray-300 transition duration-300"
+                >
+                  Players
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/videos"
+                  className="text-white hover:text-gray-300 transition duration-300"
+                >
+                  Videos
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/odds"
+                  className="text-white hover:text-gray-300 transition duration-300"
+                >
+                  Odds
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/liveodd"
+                  className="text-white hover:text-gray-300 transition duration-300"
+                >
+                  Live-Odds
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/comment"
+                  className="text-white hover:text-gray-300 transition duration-300"
+                >
+                  Comments
+                </Link>
+              </li>
             </ul>
           </div>
           <div className="md:hidden">
@@ -150,13 +204,67 @@ const Navbar = () => {
             </li>
 
             <li>
-                <Link
-                  to="/topscorer"
-                  className="text-white hover:text-gray-300 transition duration-300"
-                >
-                  TopScorer
-                </Link>
-              </li>
+              <Link
+                to="/topscorer"
+                className="text-white hover:text-gray-300 transition duration-300"
+              >
+                TopScorer
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/team"
+                className="text-white hover:text-gray-300 transition duration-300"
+              >
+                Teams
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/players"
+                className="text-white hover:text-gray-300 transition duration-300"
+              >
+                Players
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/videos"
+                className="text-white hover:text-gray-300 transition duration-300"
+              >
+                Videos
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/odds"
+                className="text-white hover:text-gray-300 transition duration-300"
+              >
+                Odds
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/liveodd"
+                className="text-white hover:text-gray-300 transition duration-300"
+              >
+                Live-Odds
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/comment"
+                className="text-white hover:text-gray-300 transition duration-300"
+              >
+                Comments
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
